@@ -60,7 +60,7 @@ export default function ArticleShow() {
         axios
             .post(`/api/comments`, {
                 article_id: id,
-                author_name: user.name,
+                author_name: user ? user.name : '',
                 content: comment,
             })
             .then((res) => {
@@ -100,9 +100,13 @@ export default function ArticleShow() {
                                 onChange={(e) => setComment(e.target.value)}
                                 placeholder="Ваш комментарий..."
                             />
-                            <Button onClick={submitComment} disabled={!comment}>
-                                Отправить
-                            </Button>
+                            {
+                                user &&
+                                    <Button onClick={submitComment} disabled={!comment}>
+                                        Отправить
+                                    </Button>
+                            }
+
                         </CardContent>
                     </Card>
                 )}
