@@ -6,9 +6,9 @@ use App\Actions\Auth\LoginAction;
 use App\Actions\Auth\LogoutAction;
 use App\Actions\Auth\RegisterAction;
 use App\Http\Controllers\Controller;
-use app\Http\Requests\Auth\LoginRequest;
-use app\Http\Requests\Auth\LogoutRequest;
-use app\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\LogoutRequest;
+use App\Http\Requests\Auth\RegisterRequest;
 
 class AuthController extends Controller
 {
