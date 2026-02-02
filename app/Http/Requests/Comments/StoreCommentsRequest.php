@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\Comments;
 
-use App\DTO\Articles\CreateArticleDTO;
 use App\DTO\Comments\CreateCommentDTO;
 use Illuminate\Foundation\Http\FormRequest;
 

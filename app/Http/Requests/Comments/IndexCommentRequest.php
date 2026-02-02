@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\Comments;
 
-use App\DTO\Articles\IndexArticleDTO;
 use App\DTO\Comments\IndexCommentDTO;
 use Illuminate\Foundation\Http\FormRequest;
 
