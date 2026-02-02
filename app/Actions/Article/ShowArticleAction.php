@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 final class ShowArticleAction
 {
-    public function execute(ShowArticleDTO $dto): array|\Illuminate\Pagination\LengthAwarePaginator
+    public function execute(ShowArticleDTO $dto): Article|array
     {
         return Article::where('id', '=', $dto->id)->first();
     }

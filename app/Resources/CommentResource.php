@@ -4,9 +4,8 @@ namespace App\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Str;
 
-class ArticleResource extends JsonResource
+class CommentResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,8 +16,9 @@ class ArticleResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => $this->title,
-            'content' => $request->routeIs('api.articles.index') ? Str::limit($this->content, 30) : $this->content,
+            'author_name' => $this->author_name,
+            'content' => $this->content,
+            'created_at' => $this->created_at,
         ];
     }
 }
