@@ -19,6 +19,7 @@ Route::post('login', [AuthController::class, 'login'])->name('api.login');
 Route::get('comments', [CommentsController::class, 'index'])->name('api.comments.index');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::post('logout', [AuthController::class, 'logout'])->name('api.logout');
     Route::post('comments', [CommentsController::class, 'store'])->name('api.comments.store');
+
+    Route::post('logout', [AuthController::class, 'logout'])->name('api.logout');
 });
